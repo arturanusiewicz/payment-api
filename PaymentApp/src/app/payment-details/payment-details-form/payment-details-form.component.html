@@ -1,0 +1,35 @@
+<form novalidate autocomplete="off" #form="ngForm" (submit)="onSubmit(form)" style="background: #EEF0EF; border-radius: 5px; border-top: solid #FFFFFF 1px; border-bottom: solid #D9D9D7 1px;">
+    <input type="hidden" name="paymentDetailId"
+    [value]="service.formData.paymentDetailId" />
+    <div class="form-group col-md-12" style="padding: 15px;">
+        <label>WŁAŚCICIEL KARTY</label>
+        <input class="form-control fom-control-lg" placeholder="Imię i nazwisko"
+        name="cardOwnerName" #cardOwnerName="ngModel"[(ngModel)]="service.formData.cardOwnerName"
+        required [class.invalid] = "cardOwnerName.invalid && cardOwnerName.touched">
+    </div>
+
+    <div class="form-group col-md-12" style="padding: 15px;">
+        <label>NUMER KARTY</label>
+        <input class="form-control fom-control-lg" placeholder="16 cyfrowy numer karty"
+        name="cardNumber" #cardNumber="ngModel"[(ngModel)]="service.formData.cardNumber"
+        required maxlength="16" minlength="16" [class.invalid] = "cardNumber.invalid && cardNumber.touched">
+    </div>
+
+    <div class="row" style="padding: 15px;">
+        <div class="form-group col-md-6">
+            <label>KOD CVV</label>
+            <input type="password" class="form-control fom-control-lg" placeholder="3 cyfrowy kod bezpieczeństwa"
+            name="securityCode" #securityCode="ngModel"[(ngModel)]="service.formData.securityCode"
+            required maxlength="3" minlength="3" [class.invalid] = "securityCode.invalid && securityCode.touched">
+        </div>
+        <div class="form-group col-md-6">
+            <label>DATA WAŻNOŚCI KARTY</label>
+            <input class="form-control fom-control-lg" placeholder="Format: MM/RR"
+            name="expirationDate" #expirationDate="ngModel"[(ngModel)]="service.formData.expirationDate"
+            required maxlength="5" minlength="5" [class.invalid] = "expirationDate.invalid && expirationDate.touched">
+        </div>
+    </div>
+    <div class="form-group" style="padding: 15px;">
+        <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid">DODAJ</button>
+    </div>
+</form>

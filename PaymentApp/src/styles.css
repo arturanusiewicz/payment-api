@@ -1,0 +1,96 @@
+.form-group label {
+    color: #7D7B78;
+  }
+  
+  .form-group input {
+    font-weight: 500;
+  }
+  
+  .form-group input::placeholder {
+    color: #D9D9D7;
+    font-weight: 300;
+  }
+
+  .form-control {
+      border-radius: 5px;
+      background-color: #F5F5F4;
+      border-color: #FFFFFF;
+      border-bottom-color: #FFFFFF;
+      border-top-color: #D9D9D7;
+      color: #7D7B78;
+  }
+
+  .form-control:focus {
+      border-color: #A2B86B;
+      box-shadow: inset 0 1px 1px rgba(45, 129, 121, 0.1), 0 0 5px rgba(45, 129, 121, 1);
+  }
+
+  .form-control label {
+      color: #7D7B78;
+  }
+  
+  thead th{
+    color: #2D8179;
+    font-weight: 400;
+  }
+  
+  table tr:hover {
+    background-color: #EEF0EF;
+    cursor: pointer;
+  }
+
+  table tr {
+      color: #7D7B78;
+  }
+  
+  /*for invalid form controls*/
+  input.invalid {
+    border-color: #BC323E;
+    border-width: 1px;
+  }
+
+  .btn { 
+    color: #ffffff; 
+    background-color: #2D8179; 
+    border-color: #2D8179; 
+  } 
+   
+  .btn:hover, 
+  .btn:focus, 
+  .btn:active, 
+  .btn.active, 
+  .open .dropdown-toggle.btn { 
+    color: #ffffff; 
+    background-color: #2D8179; 
+    border-color: #2D8179; 
+  } 
+   
+  .btn:active, 
+  .btn.active, 
+  .open .dropdown-toggle.btn { 
+    background-image: none; 
+  } 
+   
+  .btn.disabled, 
+  .btn[disabled], 
+  fieldset[disabled] .btn, 
+  .btn.disabled:hover, 
+  .btn[disabled]:hover, 
+  fieldset[disabled] .btn:hover, 
+  .btn.disabled:focus, 
+  .btn[disabled]:focus, 
+  fieldset[disabled] .btn:focus, 
+  .btn.disabled:active, 
+  .btn[disabled]:active, 
+  fieldset[disabled] .btn:active, 
+  .btn.disabled.active, 
+  .btn[disabled].active, 
+  fieldset[disabled] .btn.active { 
+    background-color: #2D8179; 
+    border-color: #2D8179; 
+  } 
+   
+  .btn .badge { 
+    color: #2D8179; 
+    background-color: #ffffff; 
+  }
